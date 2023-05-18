@@ -1,6 +1,5 @@
 
-# BitMiner
+# BitMiner By Nabir14
+Mine Chunks And Get Bits!
 
-BitMiner is a terminal based mining game made by Nabir14 where you mine chunks and get bits from the mined chunks
-
-![IMG_20230518_211500](https://github.com/Nabir14/BitMiner/assets/82253045/41f37e9d-a6e2-486c-beb7-ddaf19a85f1f)
+![IMG_20230518_211500](https://github.com/Nabir14/BitMiner/assets/82253045/5a3a30e8-8180-4a44-8d4f-1efe2092347b)
