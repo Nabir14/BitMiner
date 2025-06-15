@@ -12,3 +12,14 @@ Mine Chunks And Get Bits!
 - `B`: Check Balance
 - `S`: Enter Pickaxe Shop
 - `Q`: Exit the Game
+
+**How To Play:**
+1. Clone The Repository:
+   ```sh
+   git clone https://github.com/Nabir14/BitMiner.git
+   ```
+2. Use Make To Compile And Run The Program:
+   ```sh
+   make all
+   ```
+3. Enjoy! 
