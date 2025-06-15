@@ -1,5 +1,14 @@
-
-# BitMiner By Nabir14
+# BitMiner
 Mine Chunks And Get Bits!
 
-![IMG_20230518_211500](https://github.com/Nabir14/BitMiner/assets/82253045/5a3a30e8-8180-4a44-8d4f-1efe2092347b)
+![IMG_20250615_170335](https://github.com/user-attachments/assets/24b7e256-07f2-4856-a6f6-411d053d8e27)
+
+**Version:** `1.1`
+
+**Commands:**
+- `H`: See All Available Actions
+- `M`: Mine Bits
+- `D`: Check Durability
+- `B`: Check Balance
+- `S`: Enter Pickaxe Shop
+- `Q`: Exit the Game
