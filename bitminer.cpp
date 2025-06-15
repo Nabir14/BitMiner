@@ -69,7 +69,7 @@ class gameCode
 					switch(input){
 						case 1:
 							if(balance > 5000){
-								balance -= 50000;
+								balance -= 5000;
 								durability += 100;
 								cout << "You bought an Basic Pickaxe!" << endl;
 							}else{
@@ -78,7 +78,7 @@ class gameCode
 							break;
 						case 2:
 							if(balance > 50000){
-								balance -= 5000;
+								balance -= 50000;
 								durability += 1000;
 								cout << "You bought an Gold Pickaxe!" << endl;
 							}else{
