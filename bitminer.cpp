@@ -26,7 +26,7 @@ class gameCode
 		cout << "[Welcome To BitMiner]" << endl;
 		cout << "[version: "+gameVersion+"]" << endl;
 		cout << "[author: "+gameAuthor+"]" << endl;
-		cout << "type 'M' to mine chunks" << endl;
+		cout << "[Type 'H' for help]" << endl;
 		isGameRunning = true;
 	}
 	void gameLoop()
@@ -37,6 +37,14 @@ class gameCode
 			char userInput;
 			cin >> userInput;
 			switch(toupper(userInput)){
+				case 'H':
+					cout << "'H': See All Available Actions" << endl;
+					cout << "'M': Mine Bits" << endl;
+					cout << "'D': Check Pickaxe Durability" << endl;
+					cout << "'B': Check Balance" << endl;
+					cout << "'S': Enter Pickaxe Shop" << endl;
+					cout << "'Q': Quit Game" << endl;
+					break;
 				case 'M':
 					if(durability > 0){
 						durability -= 1;
@@ -53,6 +61,10 @@ class gameCode
 					isGameRunning = false;
 					cout << "Game Quit!" << endl;
 					break;
+				case 'D':
+					cout << "Durability: ";
+					cout << durability << endl;
+					break;
 				case 'B':
 					cout << "Balance: ";
 					cout << balance;
@@ -63,7 +75,7 @@ class gameCode
 					cout << "<1> Basic Pickaxe [5000 Bits]" << endl;
 					cout << "<2> Gold Pickaxe [50000 Bits]" << endl;
 					cout << "<3> Diamond Pickaxe [500000 Bits]" << endl;
-					cout << "<?>";
+					cout << "<?> ";
 					int input;
 					cin >> input;
 					switch(input){
