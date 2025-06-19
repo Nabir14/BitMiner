@@ -18,8 +18,15 @@ Mine Chunks And Get Bits!
    ```sh
    git clone https://github.com/Nabir14/BitMiner.git
    ```
-2. Use Make To Compile And Run The Program:
+
+2. Change to the downloaded repository's folder
+   ```sh
+   cd BitMiner
+   ```
+   
+3. Use Make To Compile And Run The Program:
    ```sh
    make all
    ```
-3. Enjoy! 
+   
+4. Enjoy! 
