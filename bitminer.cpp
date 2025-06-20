@@ -7,7 +7,7 @@ class gameCode
 {
   private:
 	string gameAuthor = "Nabir14";
-	string gameVersion = "1.1";
+	string gameVersion = "1.2";
   	int balance = 0;
 	int level = 0;
 	int durability = 100;	
@@ -78,6 +78,10 @@ class gameCode
 					cout << "<?> ";
 					int input;
 					cin >> input;
+					if(cin.fail()){
+						cin.clear();
+						input = -1;
+					}
 					switch(input){
 						case 1:
 							if(balance > 5000){
