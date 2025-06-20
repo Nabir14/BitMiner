@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <cctype>
+#include <limits>
 using namespace std;
 
 class gameCode
@@ -24,8 +25,8 @@ class gameCode
 		cout << "[    *    ]" << endl;
 		cout << "[    *    ]" << endl;
 		cout << "[Welcome To BitMiner]" << endl;
-		cout << "[version: "+gameVersion+"]" << endl;
-		cout << "[author: "+gameAuthor+"]" << endl;
+		cout << "[version: " << gameVersion << "]" << endl;
+		cout << "[author: " << gameAuthor << "]" << endl;
 		cout << "[Type 'H' for help]" << endl;
 		isGameRunning = true;
 	}
@@ -71,44 +72,59 @@ class gameCode
 					cout << " bits" << endl;
 					break;
 				case 'S':
-					cout << "(Pickaxe Shop)" << endl;
-					cout << "<1> Basic Pickaxe [5000 Bits]" << endl;
-					cout << "<2> Gold Pickaxe [50000 Bits]" << endl;
-					cout << "<3> Diamond Pickaxe [500000 Bits]" << endl;
-					cout << "<?> ";
-					int input;
-					cin >> input;
-					switch(input){
-						case 1:
-							if(balance > 5000){
-								balance -= 5000;
-								durability += 100;
-								cout << "You bought an Basic Pickaxe!" << endl;
-							}else{
-								cout << "Insufficient Balance!" << endl;
-							}
-							break;
-						case 2:
-							if(balance > 50000){
-								balance -= 50000;
-								durability += 1000;
-								cout << "You bought an Gold Pickaxe!" << endl;
-							}else{
-								cout << "Insufficient Balance!" << endl;
-							}
-							break;
-						case 3:
-							if(balance > 500000){
-								balance -= 500000;
-								durability += 10000;
-								cout << "You bought an Diamond Pickaxe!" << endl;
-							}else{
-								cout << "Insufficient Balance!" << endl;
-							}
-							break;
-						default:
+					{
+					bool inShop = true;
+					while (inShop) {
+						cout << "(Pickaxe Shop)" << endl;
+						cout << "<1> Basic Pickaxe [5000 Bits]" << endl;
+						cout << "<2> Gold Pickaxe [50000 Bits]" << endl;
+						cout << "<3> Diamond Pickaxe [500000 Bits]" << endl;
+						cout << "<4> Exit shop" << endl;
+						cout << "<?> ";
+						int input;
+						cin >> input;
+						if(cin.fail()){
+							cin.clear(); // clear fail state
+							cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard input
 							cout << "Invalid Item!" << endl;
-							break;
+							continue;
+						}
+						switch(input){
+							case 1:
+								if(balance >= 5000){
+									balance -= 5000;
+									durability += 100;
+									cout << "You bought a Basic Pickaxe!" << endl;
+								}else{
+									cout << "Insufficient Balance!" << endl;
+								}
+								break;
+							case 2:
+								if(balance >= 50000){
+									balance -= 50000;
+									durability += 1000;
+									cout << "You bought a Gold Pickaxe!" << endl;
+								}else{
+									cout << "Insufficient Balance!" << endl;
+								}
+								break;
+							case 3:
+								if(balance >= 500000){
+									balance -= 500000;
+									durability += 10000;
+									cout << "You bought a Diamond Pickaxe!" << endl;
+								}else{
+									cout << "Insufficient Balance!" << endl;
+								}
+								break;
+							case 4:
+								inShop = false;
+								break;
+							default:
+								cout << "Invalid Item!" << endl;
+								break;
+						}
+					}
 					}
 					break;
 				default:
