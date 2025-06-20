@@ -8,7 +8,7 @@ class gameCode
 {
   private:
 	string gameAuthor = "Nabir14";
-	string gameVersion = "1.1";
+	string gameVersion = "1.2";
   	int balance = 0;
 	int level = 0;
 	int durability = 100;	
