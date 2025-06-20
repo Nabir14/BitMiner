@@ -1,7 +1,7 @@
 # BitMiner
 Mine Chunks And Get Bits!
 
-![IMG_20250620_203143](https://github.com/user-attachments/assets/cf4c8714-ce36-4d74-bb6b-781985f6fa19)
+![IMG_20250620_203636](https://github.com/user-attachments/assets/ef83e692-ad74-49c7-8792-a9b96e4f1c26)
 
 **Version:** `1.3`
 
