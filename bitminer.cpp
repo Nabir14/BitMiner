@@ -7,7 +7,7 @@ class gameCode
 {
   private:
 	string gameAuthor = "Nabir14";
-	string gameVersion = "1.2";
+	string gameVersion = "1.3";
   	int balance = 0;
 	int level = 0;
 	int durability = 100;	
@@ -75,6 +75,7 @@ class gameCode
 					cout << "<1> Basic Pickaxe [5000 Bits]" << endl;
 					cout << "<2> Gold Pickaxe [50000 Bits]" << endl;
 					cout << "<3> Diamond Pickaxe [500000 Bits]" << endl;
+					cout << "<0> Exit Shop" << endl;
 					cout << "<?> ";
 					int input;
 					cin >> input;
@@ -109,6 +110,9 @@ class gameCode
 							}else{
 								cout << "Insufficient Balance!" << endl;
 							}
+							break;
+						case 0:
+							cout << "Exiting Shop" << endl;
 							break;
 						default:
 							cout << "Invalid Item!" << endl;
